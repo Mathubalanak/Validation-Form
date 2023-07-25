@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Valid.css">
+    <title>Registration Page</title>
+</head>
+<script>
+    function Valid() {
+        var first = document.hi.first.value;
+        var sec = document.hi.sec.value;
+        var password1 = document.hi.password1.value;
+        var password2 = document.hi.password2.value;
+        var ph = document.hi.ph.value;
+
+        localStorage.setItem("ph", ph);
+        localStorage.setItem("password1", password1);
+
+
+
+        if (first == "" || sec == "") {
+            alert("Name can't be blank");
+            return false;
+        }
+        else if (first == sec) {
+            document.getElementById("one").innerHTML = " &#9888; Same Name Detected";
+            return false;
+        }
+        else if (isNaN(ph)) {
+            document.getElementById("three").innerHTML = " &#9888; Enter Numbers Only";
+            return false;
+        }
+        else if (ph.length != 10) {
+            alert("Enter Correct Ph number");
+            return false;
+        }
+        else if (password1 == "" || password2 == "") {
+            alert("Enter Password");
+            return false;
+        }
+
+        else if (password1.length < 7) {
+            alert("Password Min lenght is 7");
+            return false;
+
+        }
+        else if (password1 != password2) {
+            document.getElementById("four").innerHTML = " &#9888; Password must be same";
+            return false;
+        }
+    }
+</script>
+
+<body>
+    <div class="container">
+
+        <form name="hi" action="Login.html" onsubmit="return Valid()">
+            <h1>Self Registration</h1>
+            First Name <br><input type="text" name="first"><br>
+            Second Name <br><input type="text" name="sec"><span id="one"></span><br>
+            Email <br><input type="email" name="mail"></span><br>
+            Ph Number <br><input type="text" name="ph"><span id="three"></span><br>
+            Password <br><input type="password" name="password1"><br>
+            Confirm Password <br><input type="password" name="password2"><span id="four"></span><br>
+            <input id="button" type="submit" name="" value="Register">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+   body {
+       background-image: url(https://linchpinsales.com/wp-content/uploads/2018/10/background-1400x700-man-on-laptop.jpg);
+       background-repeat: no-repeat;
+
+   }
+
+   .container {
+       display: flex;
+       justify-content: center;
+   }
+
+   .full {
+       display: flex;
+       justify-content: center;
+       margin-top: 170px;
+   }
+
+   form {
+       background-image: url(https://images.ctfassets.net/co0pvta7hzrh/U7naGAUU8AroSP7R3koHv/7a4c8ab3868f74bb197c1069401aac26/pre-registration_form_template_Thumbnail.png);
+       padding: 2.8%;
+       font-size: 20px;
+       border-radius: 2%;
+       color: #885fbb;
+       background-size: cover;
+   }
+
+
+   input {
+       height: 30px;
+       width: 320px;
+       margin: 3px 0px 15px 0px;
+   }
+
+   #button {
+       height: 40px;
+       width: 150px;
+       margin-left: 85px;
+       margin-top: 5px;
+       margin-bottom: 0px;
+       font-size: 25px;
+       border-radius: 13px;
+       background-color: rgba(19, 245, 19, 0.918);
+       color: blue;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-weight: bold;
+       letter-spacing: 0.3px;
+   }
+
+   span {
+       color: red;
+   }
+
+   #msg {
+       color: red;
+       text-align: center;
+       font-size: 160px;
+   }
+
+   h1 {
+       color: #a4ddf6;
+       font-size: 40px;
+       margin-top: 0px;
+       margin-bottom: 15px;
+       text-align: center;
+   }
+
+   h2 {
+       color: green;
+       text-align: center;
+       font-size: 130px;
+   }

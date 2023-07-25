@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Valid.css">
+    <title>Login Page</title>
+</head>
+<script>
+    function login() {
+        var num = document.hi.num.value;
+        var pass = document.hi.pass.value;
+
+        const ph = localStorage.getItem("ph");
+        const password1 = localStorage.getItem("password1");
+
+        if (num == "" || pass == "") {
+            document.getElementById("one").innerHTML = " &#9888; Enter Number and Password First";
+            return false;
+        }
+        else if (num != ph || pass != password1) {
+            alert("Enter a Valid Number and Password")
+            return false;
+        }
+    }
+</script>
+
+
+<body>
+    <div class="full">
+        <form action="Msg.html" name="hi" onsubmit="return login()">
+            Ph Number <br><input type="text" name="num"><span id="one"></span><br>
+            Password <br><input type="password" name="pass"><br>
+            <input id="button" type="submit" value="LOG IN">
+        </form>
+    </div>
+</body>
+
+</html>
